@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
       <div class="p-5 bg-sky-800 text-white">
         <div class="text-3xl font-semibold">Weather API</div>
       </div>
-      <div class="pt-6 bg-slate-800 flex-1">
+      <div class="flex flex-col gap-10 pt-6 bg-slate-800 flex-1">
         <div class="flex justify-center items-center">
           <input
             id="input-location"
@@ -24,6 +24,35 @@
             <button id="search">
               <img src="images/search.svg" alt="search" class="w-6" />
             </button>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            id="forecast-content"
+            class="flex w-[500px] min-h-[200px] bg-slate-700 rounded-md p-[20px] hidden"
+          >
+            <div class="flex-1">
+              <div id="country" class="text-white text-3xl font-semibold"></div>
+              <div id="name" class="text-white text-2xl font-semibold"></div>
+              <div id="temp" class="text-white text-xl font-semibold"></div>
+              <div id="humidity" class="text-white font-semibold"></div>
+              <div id="wind" class="text-white font-semibold"></div>
+            </div>
+            <div>
+              <div
+                id="condition"
+                class="text-white text-2xl font-semibold"
+              ></div>
+              <div class="flex justify-center"><img id="condition-img" /></div>
+              <div class="flex justify-center pt-6">
+                <div
+                  id="celsiusToFahrenheit"
+                  class="text-white cursor-pointer font-semibold"
+                >
+                  Display <span id="temperature-unit">°F</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
